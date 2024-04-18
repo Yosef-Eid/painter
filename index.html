@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>painter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+  <canvas id="drawingCanvas"></canvas>
+  <div class="painter-tools">
+    <div class="tools">
+
+      <!-- change color pen -->
+      <label for="colorPicker" title="Pen color">
+        <ion-icon name="color-palette-outline" class="tool"></ion-icon>
+      </label>
+      <input type="color" id="colorPicker" value="#000000" style="display: none;">
+
+      <!-- change painter background color -->
+      <label for="backgroundColorPicker" title="Background color">
+        <ion-icon name="color-fill-outline" class="tool"></ion-icon>
+      </label>
+      <input type="color" id="backgroundColorPicker" value="#000000" style="display: none;"></input>
+
+      <!-- reset all -->
+      <ion-icon id="clearCanvas" name="reload-outline" title="Reset all" class="tool"></ion-icon>
+      <img src="icon/eraser.png"  id="eraseMode" class="tool" />
+
+          <!-- upload Img -->
+    <div id="uploadImg" >
+      <label for="addImg">
+        <ion-icon name="image-outline" class="tool"></ion-icon>
+      </label>
+      <input type="file" id="addImg" style="display: none;" >
+    </div>
+
+    </div>
+    <!-- change size pen -->
+    <div class="size-pen">
+      <label for="brushSize">Size</label>
+      <input type="range" id="brushSize" min="1" max="50" value="5">
+      <p id="valueRange">5</p>
+    </div>
+
+
+
+      <!-- save painter to img -->
+    <ion-icon name="save-outline" id="saveImage" title="save" class="tool"></ion-icon>
+
+  </div>
+
+</body>
+
+</html>
